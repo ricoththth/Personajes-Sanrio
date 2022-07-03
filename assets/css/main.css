@@ -4,6 +4,9 @@
     margin: 0%;
     font-family: 'Poppins', sans-serif;
 }
+img{
+    max-width: 100%;
+}
 a{
     text-decoration: none;
 }
@@ -24,10 +27,13 @@ td{
 }
 .content{
     max-width: 960px;
-    max-height: 500px;
     width: 100%;
-    height: 100%;
+    height: 80vh;
     background-color: #fff;
+    overflow: scroll;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .table{
     width: 100%;
@@ -72,4 +78,25 @@ td{
 }
 .text p{
     margin-top: 1em;
+}
+@media (max-width:600px) {
+    .content{
+        padding: 1em;
+    }
+    td{
+        display: block;
+        width: 100%;
+    }
+    td:nth-of-type(1){
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+    th{
+        display: none;
+    }
+}
+@media (min-height:550px){
+    .content{
+        height: 500px;
+    }
 }
